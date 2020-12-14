@@ -8,7 +8,7 @@ namespace gas{
         class View: public gas::Object{
         public:
             View();
-            virtual void draw();
+            // virtual void draw();
         };
     }
 }
