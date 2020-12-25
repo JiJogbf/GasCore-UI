@@ -13,6 +13,9 @@ App::~App(){
 }
 
 void App::run(){
+    mMainWindow->create();
+    mMainWindow->show();
+    
     MSG msg ={ };
     while (GetMessage(&msg, NULL, 0, 0)){
         TranslateMessage(&msg);
