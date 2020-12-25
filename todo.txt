@@ -1,3 +1,4 @@
+[x] #3 Adding main message processing loop here.
+
 [ ] #1 make PIMPL here for crossplatform latter.
 [ ] #2 Calling ShowWindow with proper params here.
-[ ] #3 Adding main message processing loop here.

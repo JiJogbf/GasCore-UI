@@ -13,7 +13,11 @@ App::~App(){
 }
 
 void App::run(){
-    /* @todo: #3 adding main message processing loop here*/
+    MSG msg ={ };
+    while (GetMessage(&msg, NULL, 0, 0)){
+        TranslateMessage(&msg);
+        DispatchMessage(&msg);
+    }
 }
 
 }
