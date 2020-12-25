@@ -1,6 +1,7 @@
+#include <windows.h>
+
 #include <gas\Window.hpp>
 #include <gas\App.hpp>
-
 
 int WINAPI WinMain(
         HINSTANCE hInstance,
@@ -8,7 +9,7 @@ int WINAPI WinMain(
         LPSTR pCmdLine, 
         int nCmdShow
 ){
-    gas::ui::App app(new gas::ui::Window(nCmdShow), hInstance);
+    gas::ui::App app(new gas::ui::Window(nCmdShow));
     app.run();
     return 0;
 }

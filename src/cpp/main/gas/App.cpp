@@ -7,8 +7,11 @@ namespace gas{
 namespace ui{
 
 
-App::App(Window* window, HINSTANCE instance): 
-    mImpl(new impl::WindowsAppImpl(window, instance))
+App::App(Window* window): 
+
+    /* @todo: #8 somehow remove GetModuleHandle latter from here.
+        We should use try use direct references to hInstance variable*/
+    mImpl(new impl::WindowsAppImpl(window, GetModuleHandle(nullptr)))
 {}
 
 App::~App(){

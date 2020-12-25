@@ -12,7 +12,7 @@ namespace gas{
         private:
             impl::AppImpl* mImpl;
         public:
-            App(Window* window, HINSTANCE instance);
+            App(Window* window);
             virtual ~App();
             virtual void run();
         };
