@@ -1,8 +1,14 @@
 #include <gas\Window.hpp>
 #include <gas\App.hpp>
 
-int main(int argc, char** argv){
-    gas::App app(new gas::Window());
+
+int WINAPI WinMain(
+        HINSTANCE hInstance,
+        HINSTANCE hPrevInstance, 
+        LPSTR pCmdLine, 
+        int nCmdShow
+){
+    gas::ui::App app(new gas::ui::Window(), hInstance);
     app.run();
     return 0;
 }
