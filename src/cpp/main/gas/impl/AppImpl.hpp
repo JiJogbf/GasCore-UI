@@ -2,8 +2,6 @@
 
 #include <gas\Object.hpp>
 
-#include <windows.h>
-
 namespace gas{
     namespace ui{
         namespace impl{
