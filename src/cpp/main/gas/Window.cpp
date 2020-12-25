@@ -3,16 +3,28 @@
 namespace gas{
 namespace ui{
 
-Window::Window(): mWnd(nullptr){}
+Window::Window(int mode): 
+    mWnd(nullptr), 
+    mShowMode(mode)
+{}
 
 Window::~Window(){
+    close();
+}
+
+void Window::create(){
+    mWnd = nullptr;
+}
+
+void Window::close(){
     if(mWnd != nullptr){
         CloseWindow(mWnd);
+        mWnd = nullptr;
     }
 }
 
 void Window::show(){
-    // @todo: #2 Calling ShowWindow with proper params here.
+    ShowWindow(mWnd, mShowMode);
 }
 
 }

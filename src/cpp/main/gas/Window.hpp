@@ -10,9 +10,12 @@ namespace gas{
         private:
             /* @todo: #1 make PIMPL here for crossplatform latter. */
             HWND mWnd;
+            int mShowMode;
         public:
-            Window();
+            Window(int mode);
             virtual ~Window();
+            virtual void create();
+            virtual void close();
             virtual void show();
         };
     }
