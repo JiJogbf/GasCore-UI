@@ -6,4 +6,4 @@
        This sould be called just once per Window type.
 [ ] #5 Should have acces to hinstance variable 
        from other source than that.     
-
+[ ] #6 App: make PIMPL here for crossplatform latter.

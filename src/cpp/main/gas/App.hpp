@@ -8,6 +8,7 @@ namespace gas{
     namespace ui{
         class App: public Object{
         private:
+            /* @todo: #6 App: make PIMPL here for crossplatform latter. */           
             Window* mMainWindow;
             HINSTANCE mHinstance;
         public:
