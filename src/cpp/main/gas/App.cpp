@@ -1,3 +1,5 @@
+#include "App.hpp"
+
 namespace gas{
 namespace ui{
 

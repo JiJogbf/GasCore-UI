@@ -3,11 +3,11 @@
 namespace gas{
 namespace ui{
 
-Window::Window(): mHwnd(INVALID_HANDLE_VALUE){}
+Window::Window(): mWnd(nullptr){}
 
 Window::~Window(){
-    if(mHwnd != INVALID_HANDLE_VALUE){
-        CloseWindow(mHwnd);
+    if(mWnd != nullptr){
+        CloseWindow(mWnd);
     }
 }
 
@@ -17,5 +17,3 @@ void Window::show(){
 
 }
 }
-
-#endif

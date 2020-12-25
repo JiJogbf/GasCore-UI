@@ -9,7 +9,7 @@ namespace gas{
         class App: public Object{
         private:
             Window* mMainWindow;
-            HINSTANCE s;
+            HINSTANCE mHinstance;
         public:
             App(Window* window, HINSTANCE instance);
             virtual ~App();
@@ -17,5 +17,3 @@ namespace gas{
         };
     }
 }
-
-#endif
