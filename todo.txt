@@ -7,3 +7,4 @@
 [ ] #5 Should have acces to hinstance variable 
        from other source than that.     
 [ ] #6 App: make PIMPL here for crossplatform latter.
+[ ] #7 MockAppImpl: remove it when we make right  implementation for Windows platform

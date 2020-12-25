@@ -6,9 +6,14 @@
 
 namespace gas{
     namespace ui{
+        namespace impl{
+            class AppImpl;
+        }
+
         class App: public Object{
         private:
             /* @todo: #6 App: make PIMPL here for crossplatform latter. */           
+            impl::AppImpl* mImpl;
             Window* mMainWindow;
             HINSTANCE mHinstance;
         public:
