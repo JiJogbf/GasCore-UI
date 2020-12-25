@@ -8,7 +8,7 @@ int WINAPI WinMain(
         LPSTR pCmdLine, 
         int nCmdShow
 ){
-    gas::ui::App app(new gas::ui::Window(), hInstance);
+    gas::ui::App app(new gas::ui::Window(nCmdShow), hInstance);
     app.run();
     return 0;
 }
