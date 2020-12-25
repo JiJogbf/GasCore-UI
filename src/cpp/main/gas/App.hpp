@@ -2,8 +2,6 @@
 
 #include "Window.hpp"
 
-#include <windows.h>
-
 namespace gas{
     namespace ui{
         namespace impl{
@@ -12,10 +10,7 @@ namespace gas{
 
         class App: public Object{
         private:
-            /* @todo: #6 App: make PIMPL here for crossplatform latter. */           
             impl::AppImpl* mImpl;
-            Window* mMainWindow;
-            HINSTANCE mHinstance;
         public:
             App(Window* window, HINSTANCE instance);
             virtual ~App();

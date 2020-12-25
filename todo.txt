@@ -1,10 +1,10 @@
 [x] #3 Adding main message processing loop here.
 [x] #2 Calling ShowWindow with proper params here.
+[x] #7 MockAppImpl: remove it when we make right  implementation for Windows platform
+[x] #6 App: make PIMPL here for crossplatform latter.
 
 [ ] #1 make PIMPL here for crossplatform latter.
 [ ] #4 move registration outside Window class.
        This sould be called just once per Window type.
 [ ] #5 Should have acces to hinstance variable 
        from other source than that.     
-[ ] #6 App: make PIMPL here for crossplatform latter.
-[ ] #7 MockAppImpl: remove it when we make right  implementation for Windows platform
