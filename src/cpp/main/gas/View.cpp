@@ -3,7 +3,19 @@
 namespace gas{
 namespace ui{
 
-View::View(){}
+
+View::View(long x, long y, long width, long height):
+    mX(x), mY(y), mWidth(width), mHeight(height)
+{}
+            
+View::~View(){
+
+}
+
+void View::draw(){
+    
+}
+
 
 }
 }

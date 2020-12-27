@@ -6,9 +6,15 @@
 namespace gas{
     namespace ui{
         class View: public gas::Object{
+        protected:
+            long mX;
+            long mY;
+            long mWidth;
+            long mHeight;
         public:
-            View();
-            // virtual void draw();
+            View(long x, long y, long width, long height);
+            virtual ~View();
+            virtual void draw();
         };
     }
 }

@@ -3,7 +3,7 @@
 namespace gas{
 namespace ui{
 
-ViewGroup::ViewGroup(){}
+ViewGroup::ViewGroup(): View(0,0,1,1){}
 
 }
 }
