@@ -8,7 +8,6 @@ namespace ui{
 
 
 App::App(Window* window): 
-
     /* @todo: #8 somehow remove GetModuleHandle latter from here.
         We should use try use direct references to hInstance variable*/
     mImpl(new impl::WindowsAppImpl(window, GetModuleHandle(nullptr)))
