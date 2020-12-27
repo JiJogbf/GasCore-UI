@@ -1,4 +1,9 @@
 global tasks
+
+Для View 
+  [ ] Добавление координат к контролам  
+      (Adding coordinates to views)
+  [ ] Добавление размерности элемента
 [ ] Add simple control with text as component wich can be
     added to any ViewGroup class.
 [ ] Adding event handling for UI element's
