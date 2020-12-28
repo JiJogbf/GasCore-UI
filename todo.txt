@@ -1,21 +1,18 @@
-global tasks
-
-Для View 
-  [ ] Добавление координат к контролам  
-      (Adding coordinates to views)
-  [ ] Добавление размерности элемента
-[ ] Add simple control with text as component wich can be
-    added to any ViewGroup class.
-[ ] Adding event handling for UI element's
-
-
 done puzzles
 [x] #1 make PIMPL here for crossplatform latter.
 [x] #2 Calling ShowWindow with proper params here.
 [x] #3 Adding main message processing loop here.
 [x] #6 App: make PIMPL here for crossplatform latter.
 [x] #7 MockAppImpl: remove it when we make right  implementation for Windows platform
+Для View 
+  [x] Добавление координат к контролам  
+      (Adding coordinates to views)
+  [x] Добавление размерности элемента
 
+global tasks
+[ ] Add simple control with text as component wich can be
+    added to any ViewGroup class.
+[ ] Adding event handling for UI element's
 
 code puzzles
 [ ] #4 move registration outside Window class.
@@ -24,3 +21,4 @@ code puzzles
        from other source than that.     
 [ ] #8 Somehow remove GetModuleHandle latter from here.
        We should use try use direct references to hInstance variable
+[ ] #9 add some unique item check here before inserting new view.
