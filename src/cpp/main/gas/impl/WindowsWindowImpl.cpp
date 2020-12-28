@@ -29,7 +29,7 @@ static LRESULT CALLBACK WindowProc(
 }
 
 WindowsWindowImpl::WindowsWindowImpl(View* root, int mode):
-    WindowImpl(root, new WindowsCanvas()),
+    WindowImpl(root, nullptr /*todo: ...  bad*/),
     mWnd(nullptr), 
     mShowMode(mode)
 {}
@@ -69,6 +69,13 @@ void WindowsWindowImpl::create(){
         inst,  // Instance handle
         NULL        // Additional application data
         );
+
+    HDC dc = GetDC(mWnd);
+    // PAINTSTRUCT ps;
+    //         HDC hdc = BeginPaint(hwnd, &ps);
+    //         FillRect(hdc, &ps.rcPaint, (HBRUSH) (COLOR_WINDOW+1));
+    //         EndPaint(hwnd, &ps);
+    mCanvas = new WindowsCanvas(dc);
 }
 
 void WindowsWindowImpl::close(){

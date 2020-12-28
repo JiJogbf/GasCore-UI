@@ -7,7 +7,7 @@ namespace gas{
     namespace ui{
         namespace impl{           
             class WindowImpl: public Object{
-            private:
+            protected:
                 // impl::WindowImpl* mImpl;
                 // /* @todo: #1 make PIMPL here for crossplatform latter. */
                 // HWND mWnd;
