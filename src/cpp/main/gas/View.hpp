@@ -5,7 +5,7 @@
 
 namespace gas{
     namespace ui{
-        class View: public gas::Object{
+        class View: public gas::Object{   
         protected:
             long mX;
             long mY;

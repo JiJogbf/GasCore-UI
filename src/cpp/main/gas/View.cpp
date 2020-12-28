@@ -13,7 +13,8 @@ View::~View(){
 }
 
 void View::draw(){
-    
+    // draw simple gray rectangle area from 
+    // x,y origin with width and height here 
 }
 
 

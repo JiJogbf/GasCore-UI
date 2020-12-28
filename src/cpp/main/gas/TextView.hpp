@@ -7,7 +7,7 @@ namespace gas{
         class TextView: public View{
         public:
             TextView();
-            // virtual void draw();
+            void draw() override;
         };
     }
 }
