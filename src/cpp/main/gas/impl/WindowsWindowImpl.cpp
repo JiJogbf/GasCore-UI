@@ -1,5 +1,7 @@
 #include "WindowsWindowImpl.hpp"
 
+#include "WindowsCanvas.hpp"
+
 namespace gas{
 namespace ui{
 namespace impl{
@@ -25,15 +27,6 @@ static LRESULT CALLBACK WindowProc(
     }
     return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
-
-
-// @todo: #13 Move to file WindowsCanvas.hpp latter
-class WindowsCanvas: public Canvas{
-public: 
-    WindowsCanvas(){}
-    ~WindowsCanvas() override{}
-    void drawText(long x, long y, std::string& text, int count) override{}
-};
 
 WindowsWindowImpl::WindowsWindowImpl(View* root, int mode):
     WindowImpl(root, new WindowsCanvas()),
