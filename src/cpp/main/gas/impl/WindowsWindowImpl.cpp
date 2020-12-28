@@ -27,8 +27,8 @@ static LRESULT CALLBACK WindowProc(
 }
 
 
-WindowsWindowImpl::WindowsWindowImpl(int mode):
-    WindowImpl(),
+WindowsWindowImpl::WindowsWindowImpl(View* root, int mode):
+    WindowImpl(root),
     mWnd(nullptr), 
     mShowMode(mode)
 {}
@@ -79,6 +79,7 @@ void WindowsWindowImpl::close(){
 
 void WindowsWindowImpl::show(){
     ShowWindow(mWnd, mShowMode);
+    WindowImpl::show();
 }
 
 

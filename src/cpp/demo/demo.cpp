@@ -2,6 +2,7 @@
 
 #include <gas\Window.hpp>
 #include <gas\App.hpp>
+#include <gas\TextView.hpp>
 
 int WINAPI WinMain(
         HINSTANCE hInstance,
@@ -9,7 +10,8 @@ int WINAPI WinMain(
         LPSTR pCmdLine, 
         int nCmdShow
 ){
-    gas::ui::App app(new gas::ui::Window(nCmdShow));
+    // mock TextView
+    gas::ui::App app(new gas::ui::Window(new gas::ui::TextView(), nCmdShow));
     app.run();
     return 0;
 }

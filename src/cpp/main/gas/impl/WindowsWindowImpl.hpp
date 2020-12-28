@@ -12,7 +12,7 @@ namespace gas{
                 HWND mWnd;
                 int mShowMode;
             public:
-                WindowsWindowImpl(int mode);
+                WindowsWindowImpl(View* root, int mode);
                 ~WindowsWindowImpl();
                 void create() override;
                 void close() override;

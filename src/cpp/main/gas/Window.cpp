@@ -5,9 +5,9 @@
 namespace gas{
 namespace ui{
 
-Window::Window(int mode): 
+Window::Window(View* root, int mode): 
     Object(),
-    mImpl(new gas::ui::impl::WindowsWindowImpl(mode))
+    mImpl(new gas::ui::impl::WindowsWindowImpl(root, mode))
 {}
 
 Window::~Window(){

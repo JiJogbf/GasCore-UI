@@ -1,5 +1,6 @@
 #pragma once 
 
+#include "View.hpp"
 #include <gas\Object.hpp>
 
 namespace gas{
@@ -12,7 +13,7 @@ namespace gas{
         private:
             impl::WindowImpl* mImpl;
         public:
-            Window(int mode);
+            Window(View* root, int mode);
             virtual ~Window();
             virtual void create();
             virtual void close();

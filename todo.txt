@@ -8,13 +8,15 @@ done puzzles
   [x] Добавление координат к контролам  
       (Adding coordinates to views)
   [x] Добавление размерности элемента
+[x] Remove inheritance from ViewGroup in Window classes
+
 
 global tasks
 [ ] Add simple control with text as component wich can be
     added to any ViewGroup class.
 [ ] Adding event handling for UI element's
 [ ] Move all UI-module classes under 'ui' namespace
-[ ] Remove inheritance from ViewGroup in Window classes
+
 
 code puzzles
 [ ] #4 move registration outside Window class.
