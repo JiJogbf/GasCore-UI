@@ -4,12 +4,33 @@
 #include <gas\ViewGroup.hpp>
 #include <gas\TextView.hpp>
 
+#include <exception>
 #include <cassert>
 #include <iostream>
 
 namespace gas{
 namespace test{
 
+class MockView: public gas::ui::View{
+private:
+    bool mDebug;
+public:
+    ~MockView(){
+        if(mDebug){
+            std::cout << "~MockView()" << std::endl;
+        }       
+    }
+    MockView(bool doDebug = false): gas::ui::View(0,0,1,1), mDebug(doDebug){
+        if(mDebug){
+            std::cout << "MockView()" << std::endl;
+        }
+    }
+    void draw() override{
+        if(mDebug){
+            std::cout << "MockView.draw()" << std::endl;
+        }
+    }
+};
 
 ViewsTestCase::ViewsTestCase(){}
 
@@ -26,28 +47,26 @@ void ViewsTestCase::emptyViewGroupHaveZeroChilds(){
     // @todo: #10 Adding proper assertions in GasCore-Core
     assert(group->childCount() == 0 && "Child count has unexpected value!");
     std::cout << "emptyViewGroupHaveZeroChilds: pass" << std::endl;
-    // delete group;
 }
 
 void ViewsTestCase::appeindingThreMockViews(){
     gas::Ptr<gas::ui::ViewGroup> group(new gas::ui::ViewGroup());
     // @todo: #10 Adding proper assertions in GasCore-Core
-    group->add(new gas::ui::TextView());
-    group->add(new gas::ui::TextView());
-    group->add(new gas::ui::TextView());
+    group->add(new MockView());
+    group->add(new MockView());
+    group->add(new MockView());
     assert(group->childCount() == 3 && "Child count has unexpected value!");
     std::cout << "appeindingThreMockViews: pass" << std::endl;
 }
 
 void ViewsTestCase::removingViewFromGroup(){
     gas::Ptr<gas::ui::ViewGroup> group(new gas::ui::ViewGroup());
-    group->add(new gas::ui::TextView());
+    group->add(new MockView());
     gas::ui::View* ptr = new gas::ui::TextView();
     group->add(ptr);
-    group->add(new gas::ui::TextView());
+    group->add(new MockView());
     // @todo: #11 implement this feature and enable this test case after it
-    group->remove(ptr);
-    
+    // group->remove(ptr);   
     // assert(group->childCount() == 2 && "Child count has unexpected value!");
     // @todo: #10 Adding proper assertions in GasCore-Core
     std::cout << "removingViewFromGroup: not implemented" << std::endl;

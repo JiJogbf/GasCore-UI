@@ -26,3 +26,6 @@ code puzzles
 [ ] #10 Implement proper assertion wrapper objects\functions in GasCore-Core module
         for our unit tests
 [ ] #11 implement this feature and enable this test case after it
+
+
+[-] #12 adding proper list cleaning here
