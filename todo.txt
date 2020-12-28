@@ -9,6 +9,7 @@ done puzzles
       (Adding coordinates to views)
   [x] Добавление размерности элемента
 [x] Remove inheritance from ViewGroup in Window classes
+[x] Make all draw methods from View use Canvas for painting itself
 
 
 global tasks

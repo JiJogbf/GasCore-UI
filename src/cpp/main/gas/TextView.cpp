@@ -5,8 +5,8 @@ namespace ui{
 
 TextView::TextView(): View(0,0,1,1){}
 
-void TextView::draw(){
-    
+void TextView::draw(Canvas* canvas){
+    // canvas->drawText(....)
 }
 
 }

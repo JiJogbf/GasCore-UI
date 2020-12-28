@@ -2,6 +2,7 @@
 #define GAS_UI_VIEW_HPP_13122020_225623
 
 #include <gas\Object.hpp>
+#include "Canvas.hpp"
 
 namespace gas{
     namespace ui{
@@ -14,7 +15,7 @@ namespace gas{
         public:
             View(long x, long y, long width, long height);
             virtual ~View();
-            virtual void draw();
+            virtual void draw(Canvas* canvas);
         };
     }
 }

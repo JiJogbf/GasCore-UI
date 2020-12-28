@@ -12,7 +12,7 @@ View::~View(){
 
 }
 
-void View::draw(){
+void View::draw(Canvas* canvas){
     // draw simple gray rectangle area from 
     // x,y origin with width and height here 
 }

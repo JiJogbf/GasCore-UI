@@ -25,10 +25,10 @@ int ViewGroup::childCount() const{
     return mItems.size();
 }
 
-void ViewGroup::draw(){
-    View::draw();
+void ViewGroup::draw(Canvas* canvas){
+    View::draw(canvas);
     for(auto p = mItems.begin(); p != mItems.end(); ++p){
-        (*p)->draw();
+        (*p)->draw(canvas);
     }
 }
 

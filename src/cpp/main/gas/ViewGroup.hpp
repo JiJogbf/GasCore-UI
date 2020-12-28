@@ -7,6 +7,7 @@
 #include <gas\Ptr.hpp>
 
 #include "View.hpp"
+#include "Canvas.hpp"
 
 namespace gas{
     namespace ui{
@@ -20,7 +21,7 @@ namespace gas{
             ViewGroup& add(View* view);
             ViewGroup& remove(View* view);
             int childCount() const;
-            void draw() override;
+            void draw(Canvas* canvas) override;
         };
     }
 }

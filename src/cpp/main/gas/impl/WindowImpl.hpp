@@ -13,12 +13,14 @@ namespace gas{
                 // HWND mWnd;
                 // int mShowMode;
                 View* mRoot;
+                Canvas* mCanvas;
             public:
-                WindowImpl(View* root);
+                WindowImpl(View* root, Canvas* canvas);
                 virtual ~WindowImpl();
                 virtual void create() = 0;
                 virtual void close() = 0;
                 virtual void show();
+                virtual Canvas* canvas();
             };
         }
     }

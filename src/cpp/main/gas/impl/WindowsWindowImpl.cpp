@@ -27,8 +27,16 @@ static LRESULT CALLBACK WindowProc(
 }
 
 
+// @todo: #13 Move to file WindowsCanvas.hpp latter
+class WindowsCanvas: public Canvas{
+public: 
+    WindowsCanvas(){}
+    ~WindowsCanvas() override{}
+    void drawText(long x, long y, std::string& text, int count) override{}
+};
+
 WindowsWindowImpl::WindowsWindowImpl(View* root, int mode):
-    WindowImpl(root),
+    WindowImpl(root, new WindowsCanvas()),
     mWnd(nullptr), 
     mShowMode(mode)
 {}

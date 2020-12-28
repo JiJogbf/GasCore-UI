@@ -3,6 +3,7 @@
 #include <gas\Ptr.hpp>
 #include <gas\ViewGroup.hpp>
 #include <gas\TextView.hpp>
+#include <gas\Canvas.hpp>
 
 #include <exception>
 #include <cassert>
@@ -25,12 +26,20 @@ public:
             std::cout << "MockView()" << std::endl;
         }
     }
-    void draw() override{
+    void draw(gas::ui::Canvas* canvas) override{
         if(mDebug){
-            std::cout << "MockView.draw()" << std::endl;
+            std::cout << "MockView.draw(canvas)" << std::endl;
         }
     }
 };
+
+
+class MockCanvas: public gas::ui::Canvas{
+public:
+    ~MockCanvas(){}
+    void drawText(long x, long y, std::string& text, int count){}
+};
+
 
 ViewsTestCase::ViewsTestCase(){}
 
@@ -76,11 +85,12 @@ void ViewsTestCase::removingViewFromGroup(){
 
 void ViewsTestCase::drawingMocks(){
     gas::Ptr<gas::ui::ViewGroup> group(new gas::ui::ViewGroup());
+    gas::Ptr<gas::ui::Canvas> canvas(new MockCanvas());
     group->add(new MockView());
     group->add(new MockView());
     group->add(new MockView());
     try{
-        group->draw();
+        group->draw(canvas);
     }catch(...){
         std::cout << "drawingMocks: failed" << std::endl;    
     }

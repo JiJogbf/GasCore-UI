@@ -3,6 +3,7 @@
 #include "WindowImpl.hpp"
 
 #include <windows.h>
+#include "..\Canvas.hpp"
 
 namespace gas{
     namespace ui{
