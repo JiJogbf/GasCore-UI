@@ -10,6 +10,7 @@ done puzzles
   [x] Добавление размерности элемента
 [x] Remove inheritance from ViewGroup in Window classes
 [x] Make all draw methods from View use Canvas for painting itself
+[x] #13 Move to file WindowsCanvas.hpp latter
 
 
 global tasks
