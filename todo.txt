@@ -14,6 +14,7 @@ global tasks
     added to any ViewGroup class.
 [ ] Adding event handling for UI element's
 [ ] Move all UI-module classes under 'ui' namespace
+[ ] Remove inheritance from ViewGroup in Window classes
 
 code puzzles
 [ ] #4 move registration outside Window class.
