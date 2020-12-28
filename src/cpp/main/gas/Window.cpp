@@ -6,7 +6,7 @@ namespace gas{
 namespace ui{
 
 Window::Window(int mode): 
-    ViewGroup(),
+    Object(),
     mImpl(new gas::ui::impl::WindowsWindowImpl(mode))
 {}
 
@@ -26,6 +26,7 @@ void Window::close(){
 void Window::show(){
     mImpl->show();
 }
+
 
 }
 }

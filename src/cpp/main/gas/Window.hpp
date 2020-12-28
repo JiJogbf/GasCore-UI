@@ -1,6 +1,6 @@
 #pragma once 
 
-#include "ViewGroup.hpp"
+#include <gas\Object.hpp>
 
 namespace gas{
     namespace ui{
@@ -8,7 +8,7 @@ namespace gas{
             class WindowImpl;
         }
 
-        class Window: public ViewGroup{
+        class Window: public Object{
         private:
             impl::WindowImpl* mImpl;
         public:
