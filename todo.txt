@@ -13,6 +13,7 @@ global tasks
 [ ] Add simple control with text as component wich can be
     added to any ViewGroup class.
 [ ] Adding event handling for UI element's
+[ ] Move all UI-module classes under 'ui' namespace
 
 code puzzles
 [ ] #4 move registration outside Window class.
