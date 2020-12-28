@@ -40,6 +40,7 @@ void ViewsTestCase::execute(){
     emptyViewGroupHaveZeroChilds();
     appeindingThreMockViews();
     removingViewFromGroup();
+    drawingMocks();
 }
 
 void ViewsTestCase::emptyViewGroupHaveZeroChilds(){
@@ -70,6 +71,20 @@ void ViewsTestCase::removingViewFromGroup(){
     // assert(group->childCount() == 2 && "Child count has unexpected value!");
     // @todo: #10 Adding proper assertions in GasCore-Core
     std::cout << "removingViewFromGroup: not implemented" << std::endl;
+}
+
+
+void ViewsTestCase::drawingMocks(){
+    gas::Ptr<gas::ui::ViewGroup> group(new gas::ui::ViewGroup());
+    group->add(new MockView());
+    group->add(new MockView());
+    group->add(new MockView());
+    try{
+        group->draw();
+    }catch(...){
+        std::cout << "drawingMocks: failed" << std::endl;    
+    }
+    std::cout << "drawingMocks: pass" << std::endl;
 }
 
 

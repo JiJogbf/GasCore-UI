@@ -13,6 +13,7 @@ public:
     void emptyViewGroupHaveZeroChilds();
     void appeindingThreMockViews();
     void removingViewFromGroup();
+    void drawingMocks();
 };
 
 
