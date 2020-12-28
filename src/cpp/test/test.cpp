@@ -1,15 +1,10 @@
-#include <windows.h>
+#include <gas\test\Tester.hpp>
 
-#include <gas\Window.hpp>
-#include <gas\App.hpp>
+#include "ViewsTestCase.hpp"
 
-int WINAPI WinMain(
-        HINSTANCE hInstance,
-        HINSTANCE hPrevInstance, 
-        LPSTR pCmdLine, 
-        int nCmdShow
-){
-    gas::ui::App app(new gas::ui::Window(nCmdShow));
-    app.run();
+int main(){
+    gas::test::Tester tester;
+    tester.add(new gas::test::ViewsTestCase());
+    tester.run();
     return 0;
 }
