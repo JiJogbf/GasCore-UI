@@ -29,7 +29,7 @@ static LRESULT CALLBACK WindowProc(
 }
 
 WindowsWindowImpl::WindowsWindowImpl(View* root, int mode):
-    WindowImpl(root, nullptr /*todo: ...  bad*/),
+    WindowImpl(root),
     mWnd(nullptr), 
     mShowMode(mode)
 {}
@@ -37,10 +37,7 @@ WindowsWindowImpl::WindowsWindowImpl(View* root, int mode):
 WindowsWindowImpl::~WindowsWindowImpl(){}
 
 void WindowsWindowImpl::create(){
- /*@todo: #4 move registration outside Window class. 
-     This sould be called just once per Window type */
-
-    // Register the window class.
+     // Register the window class.
     const char CLASS_NAME[]  = "Sample Window Class";
 
 
@@ -53,6 +50,8 @@ void WindowsWindowImpl::create(){
     wc.hInstance     = inst;
     wc.lpszClassName = CLASS_NAME;
 
+    /*@todo: #4 move registration outside Window class. 
+        This sould be called just once per Window type */
     RegisterClass(&wc);
 
     mWnd = CreateWindowEx(
@@ -69,13 +68,6 @@ void WindowsWindowImpl::create(){
         inst,  // Instance handle
         NULL        // Additional application data
         );
-
-    HDC dc = GetDC(mWnd);
-    // PAINTSTRUCT ps;
-    //         HDC hdc = BeginPaint(hwnd, &ps);
-    //         FillRect(hdc, &ps.rcPaint, (HBRUSH) (COLOR_WINDOW+1));
-    //         EndPaint(hwnd, &ps);
-    mCanvas = new WindowsCanvas(dc);
 }
 
 void WindowsWindowImpl::close(){
@@ -88,6 +80,10 @@ void WindowsWindowImpl::close(){
 void WindowsWindowImpl::show(){
     ShowWindow(mWnd, mShowMode);
     WindowImpl::show();
+}
+
+Canvas* WindowsWindowImpl::canvas(){
+    return new WindowsCanvas(mWnd, GetDC(mWnd));
 }
 
 

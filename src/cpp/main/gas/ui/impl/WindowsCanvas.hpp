@@ -11,8 +11,9 @@ namespace ui{
 class WindowsCanvas: public Canvas{
 protected:
     HDC mHdc;
+    HWND mHandle;
 public: 
-    WindowsCanvas(HDC hdc);
+    WindowsCanvas(HWND handle, HDC hdc);
     ~WindowsCanvas() override;
     void drawText(long x, long y, std::string& text, int count) override;
 };

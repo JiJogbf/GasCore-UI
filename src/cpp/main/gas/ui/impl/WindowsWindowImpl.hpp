@@ -18,6 +18,7 @@ namespace gas{
                 void create() override;
                 void close() override;
                 void show() override;
+                Canvas* canvas() override;
             };
         }
     }
