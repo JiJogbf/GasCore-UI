@@ -1,8 +1,8 @@
 #include <windows.h>
 
-#include <gas\Window.hpp>
-#include <gas\App.hpp>
-#include <gas\TextView.hpp>
+#include <gas\ui\Window.hpp>
+#include <gas\ui\App.hpp>
+#include <gas\ui\TextView.hpp>
 
 int WINAPI WinMain(
         HINSTANCE hInstance,

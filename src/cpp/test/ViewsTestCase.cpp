@@ -1,9 +1,9 @@
 #include "ViewsTestCase.hpp"
 
 #include <gas\Ptr.hpp>
-#include <gas\ViewGroup.hpp>
-#include <gas\TextView.hpp>
-#include <gas\Canvas.hpp>
+#include <gas\ui\ViewGroup.hpp>
+#include <gas\ui\TextView.hpp>
+#include <gas\ui\Canvas.hpp>
 
 #include <exception>
 #include <cassert>
