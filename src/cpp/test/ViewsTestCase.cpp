@@ -73,7 +73,7 @@ void ViewsTestCase::appeindingThreMockViews(){
 void ViewsTestCase::removingViewFromGroup(){
     gas::Ptr<gas::ui::ViewGroup> group(new gas::ui::ViewGroup());
     group->add(new MockView());
-    gas::ui::View* ptr = new gas::ui::TextView();
+    gas::ui::View* ptr = new gas::ui::TextView(0,0,0,0, "");
     group->add(ptr);
     group->add(new MockView());
     // @todo: #11 implement this feature and enable this test case after it

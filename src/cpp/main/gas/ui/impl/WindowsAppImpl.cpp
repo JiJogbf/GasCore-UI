@@ -16,7 +16,7 @@ namespace gas{
 
             void WindowsAppImpl::run(){
                 mMainWindow->create();
-                mMainWindow->show();
+                // mMainWindow->show();
 
                 MSG msg ={ };
                 while (GetMessage(&msg, NULL, 0, 0)){

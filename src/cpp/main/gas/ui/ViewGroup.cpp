@@ -26,7 +26,7 @@ int ViewGroup::childCount() const{
 }
 
 void ViewGroup::draw(Canvas* canvas){
-    View::draw(canvas);
+    // View::draw(canvas);
     for(auto p = mItems.begin(); p != mItems.end(); ++p){
         (*p)->draw(canvas);
     }

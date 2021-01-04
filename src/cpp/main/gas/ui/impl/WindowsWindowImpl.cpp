@@ -2,25 +2,27 @@
 
 #include "WindowsCanvas.hpp"
 
+// #include <wingdi.h>
+
 namespace gas{
 namespace ui{
 namespace impl{
 
-static LRESULT CALLBACK WindowProc(
+LRESULT CALLBACK WindowsWindowImpl::WindowProc(
     HWND hwnd, 
     UINT uMsg, 
     WPARAM wParam, 
     LPARAM lParam
 ){
+
+    WindowsWindowImpl* impl = (WindowsWindowImpl*)GetWindowLongPtr(hwnd, GWL_USERDATA);
+    // Some how getting this pointer here !
     switch (uMsg){
         case WM_DESTROY:
             PostQuitMessage(0);
             return 0;
         case WM_PAINT:{
-            PAINTSTRUCT ps;
-            HDC hdc = BeginPaint(hwnd, &ps);
-            FillRect(hdc, &ps.rcPaint, (HBRUSH) (COLOR_WINDOW+1));
-            EndPaint(hwnd, &ps);
+            impl->show();
         }
         return 0;
 
@@ -68,6 +70,9 @@ void WindowsWindowImpl::create(){
         inst,  // Instance handle
         NULL        // Additional application data
         );
+
+    SetWindowLongPtr(mWnd, GWL_USERDATA, (LONG_PTR)this);
+    ShowWindow(mWnd, mShowMode); 
 }
 
 void WindowsWindowImpl::close(){
@@ -78,7 +83,7 @@ void WindowsWindowImpl::close(){
 }
 
 void WindowsWindowImpl::show(){
-    ShowWindow(mWnd, mShowMode);
+    // 
     WindowImpl::show();
 }
 

@@ -12,9 +12,7 @@ View::View(Point<long> origin, long width, long height):
     mOrigin(origin), mWidth(width), mHeight(height)
 {}
 
-View::~View(){
-
-}
+View::~View(){}
 
 void View::draw(Canvas* canvas){
     canvas->drawRectangle(mOrigin.x, mOrigin.y, mWidth, mHeight);

@@ -12,6 +12,13 @@ namespace gas{
             private:
                 HWND mWnd;
                 int mShowMode;
+
+                static LRESULT CALLBACK WindowProc(
+                    HWND hwnd, 
+                    UINT uMsg, 
+                    WPARAM wParam, 
+                    LPARAM lParam
+                );
             public:
                 WindowsWindowImpl(View* root, int mode);
                 ~WindowsWindowImpl();
