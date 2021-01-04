@@ -21,7 +21,7 @@ public:
             std::cout << "~MockView()" << std::endl;
         }       
     }
-    MockView(bool doDebug = false): gas::ui::View(0,0,1,1), mDebug(doDebug){
+    MockView(bool doDebug = false): gas::ui::View(0, 0, 1, 1), mDebug(doDebug){
         if(mDebug){
             std::cout << "MockView()" << std::endl;
         }

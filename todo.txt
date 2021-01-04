@@ -31,6 +31,7 @@ code puzzles
 [ ] #10 Implement proper assertion wrapper objects\functions in GasCore-Core module
         for our unit tests
 [ ] #11 implement this feature and enable this test case after it
-
+[ ] #14 adding functions for calculating width and height for this structure
+[ ] #15 UItypes: create separate implementation header here for template types
 
 [-] #12 adding proper list cleaning here
