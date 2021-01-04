@@ -3,17 +3,18 @@
 
 #include <gas\Object.hpp>
 #include "Canvas.hpp"
+#include "UITypes.hpp"
 
 namespace gas{
     namespace ui{
         class View: public gas::Object{   
         protected:
-            long mX;
-            long mY;
+            Point<long> mOrigin;
             long mWidth;
             long mHeight;
         public:
             View(long x, long y, long width, long height);
+            View(Point<long> origin, long width, long height);
             virtual ~View();
             virtual void draw(Canvas* canvas);
         };
