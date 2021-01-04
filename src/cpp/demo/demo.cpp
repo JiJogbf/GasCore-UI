@@ -13,8 +13,9 @@ int WINAPI WinMain(
         int nCmdShow
 ){
     gas::ui::ViewGroup* root = new gas::ui::ViewGroup();
-    root->add(new gas::ui::TextView(20, 20, 100, 100, "My Text View Works!"));
-    root->add(new gas::ui::TextView(60, 60, 100, 100, "And my second one too!"));
+    root->add(new gas::ui::TextView(20, 20, 40, 20, "My Text View Works!"));
+    root->add(new gas::ui::TextView(20, 100, 40, 20, "And my second one too!"));
+    root->add(new gas::ui::RectangleView(20, 200, 40, 20));
     
     gas::ui::App app(
         new gas::ui::Window(
