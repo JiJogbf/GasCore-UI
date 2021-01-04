@@ -10,7 +10,8 @@ WindowImpl::~WindowImpl(){
     delete mRoot;
 }
 
-void WindowImpl::show(){
+
+void WindowImpl::paint(){
     Canvas* c = canvas();
     mRoot->draw(c);
     delete c;

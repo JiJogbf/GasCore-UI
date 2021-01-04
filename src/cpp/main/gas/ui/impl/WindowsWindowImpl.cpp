@@ -22,7 +22,7 @@ LRESULT CALLBACK WindowsWindowImpl::WindowProc(
             PostQuitMessage(0);
             return 0;
         case WM_PAINT:{
-            impl->show();
+            impl->paint();
         }
         return 0;
 
@@ -72,7 +72,7 @@ void WindowsWindowImpl::create(){
         );
 
     SetWindowLongPtr(mWnd, GWL_USERDATA, (LONG_PTR)this);
-    ShowWindow(mWnd, mShowMode); 
+    
 }
 
 void WindowsWindowImpl::close(){
@@ -83,8 +83,7 @@ void WindowsWindowImpl::close(){
 }
 
 void WindowsWindowImpl::show(){
-    // 
-    WindowImpl::show();
+    ShowWindow(mWnd, mShowMode); 
 }
 
 Canvas* WindowsWindowImpl::canvas(){
