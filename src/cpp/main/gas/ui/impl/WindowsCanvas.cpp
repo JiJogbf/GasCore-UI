@@ -19,7 +19,7 @@ void WindowsCanvas::drawText(long x, long y, std::string& text, int count){
     rc1 = rcWindow;
     rc1.left = x;
     rc1.top = y;
-    DrawText(hDC, TEXT(text.c_str()), -1, &rc1, 
+    DrawText(hDC, TEXT(text.c_str()), /*todo: #17 Do dependency on count param here latter*/-1, &rc1, 
         DT_CENTER | DT_SINGLELINE | DT_VCENTER);   
     EndPaint(mHandle, &ps);    
 }

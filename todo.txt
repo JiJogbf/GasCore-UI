@@ -34,5 +34,6 @@ code puzzles
 [ ] #14 adding functions for calculating width and height for this structure
 [ ] #15 UItypes: create separate implementation header here for template types
 [ ] #16 View::draw must draw empty rectangle before all views will be painted
+[ ] #17 Do dependency on count param here latter
 
 [-] #12 adding proper list cleaning here
