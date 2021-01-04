@@ -17,5 +17,9 @@ void WindowsCanvas::drawText(long x, long y, std::string& text, int count){
     //         EndPaint(hwnd, &ps);   
 }
 
+void WindowsCanvas::drawRectangle(long x, long y, long width, long height){
+    // todo: Perform some drawing here in window context
+}
+
 }
 }

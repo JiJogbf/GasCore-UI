@@ -1,4 +1,5 @@
 done puzzles
+[x] Move all UI-module classes under 'ui' namespace
 [x] #1 make PIMPL here for crossplatform latter.
 [x] #2 Calling ShowWindow with proper params here.
 [x] #3 Adding main message processing loop here.
@@ -17,7 +18,6 @@ global tasks
 [ ] Add simple control with text as component wich can be
     added to any ViewGroup class.
 [ ] Adding event handling for UI element's
-[ ] Move all UI-module classes under 'ui' namespace
 
 
 code puzzles

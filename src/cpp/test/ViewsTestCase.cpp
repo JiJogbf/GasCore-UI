@@ -38,6 +38,7 @@ class MockCanvas: public gas::ui::Canvas{
 public:
     ~MockCanvas(){}
     void drawText(long x, long y, std::string& text, int count){}
+    void drawRectangle(long x, long y, long width, long height){}
 };
 
 
