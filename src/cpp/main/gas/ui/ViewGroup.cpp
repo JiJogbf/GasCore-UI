@@ -3,7 +3,9 @@
 namespace gas{
 namespace ui{
 
-ViewGroup::ViewGroup(): View(0, 0, 1, 1){}
+ViewGroup::ViewGroup(long x, long y, long width, long height): 
+    View(x, y, width, height)
+{}
 
 ViewGroup::~ViewGroup(){
     mItems.clear();

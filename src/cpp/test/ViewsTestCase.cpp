@@ -54,7 +54,7 @@ void ViewsTestCase::execute(){
 }
 
 void ViewsTestCase::emptyViewGroupHaveZeroChilds(){
-    gas::Ptr<gas::ui::ViewGroup> group(new gas::ui::ViewGroup());
+    gas::Ptr<gas::ui::ViewGroup> group(new gas::ui::ViewGroup(0,0,1,1));
     // @todo: #10 Adding proper assertions in GasCore-Core
     assert(group->childCount() == 0 && "Child count has unexpected value!");
     std::cout << "emptyViewGroupHaveZeroChilds: pass" << std::endl;

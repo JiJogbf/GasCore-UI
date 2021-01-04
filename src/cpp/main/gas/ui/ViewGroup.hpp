@@ -16,7 +16,7 @@ namespace gas{
             // @todo: #13 replace STL with Ptr when it will be stable
             std::list<std::shared_ptr<View>> mItems;
         public:
-            ViewGroup();
+            ViewGroup(long x = 0, long y = 0, long width = 0, long height = 0);
             ~ViewGroup() override;
             ViewGroup& add(View* view);
             ViewGroup& remove(View* view);
