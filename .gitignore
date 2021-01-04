@@ -1,3 +1,4 @@
+.vscode
 *.exe
 *.o
 *.a
@@ -7,3 +8,4 @@ bin
 *.cmake
 Makefile
 CMakeFiles
+CMAkeCache.txt
