@@ -21,11 +21,12 @@ LRESULT CALLBACK WindowsWindowImpl::WindowProc(
         case WM_DESTROY:
             PostQuitMessage(0);
             return 0;
+        case WM_SIZE:
+        case WM_MOVE:
         case WM_PAINT:{
             impl->paint();
+            return 0;    
         }
-        return 0;
-
     }
     return DefWindowProc(hwnd, uMsg, wParam, lParam);
 }
