@@ -42,7 +42,7 @@ public:
 };
 
 
-ViewsTestCase::ViewsTestCase(){}
+ViewsTestCase::ViewsTestCase(Logger* logger): TestCase(logger){}
 
 ViewsTestCase::~ViewsTestCase(){}
 

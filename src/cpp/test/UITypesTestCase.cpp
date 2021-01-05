@@ -7,7 +7,7 @@
 namespace gas{
 namespace test{
 
-UITypesTestCase::UITypesTestCase(){}
+UITypesTestCase::UITypesTestCase(Logger* logger): TestCase(logger){}
 
 UITypesTestCase::~UITypesTestCase(){}
 

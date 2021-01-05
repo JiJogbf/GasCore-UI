@@ -7,7 +7,7 @@ namespace test{
 
 class ViewsTestCase: public TestCase{
 public:
-    ViewsTestCase();
+    ViewsTestCase(Logger* logger);
     ~ViewsTestCase();
     void execute() override;
     void emptyViewGroupHaveZeroChilds();
