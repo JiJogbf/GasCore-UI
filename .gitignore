@@ -9,3 +9,4 @@ bin
 Makefile
 CMakeFiles
 CMAkeCache.txt
+*.log
