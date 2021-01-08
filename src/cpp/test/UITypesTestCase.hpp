@@ -1,15 +1,14 @@
 #pragma once
 
-#include <gas\test\TestCase.hpp>
+#include <gas\test\RichTestCase.hpp>
 #include <gas\test\Logger.hpp>
 
 namespace gas{
 namespace test{
 
-class UITypesTestCase: public TestCase{
+class UITypesTestCase: public RichTestCase{
 public:
     UITypesTestCase(Logger* logger);
-    ~UITypesTestCase();
     void execute() override;
     void createIntegerPoint();
     void createFloatPoint();

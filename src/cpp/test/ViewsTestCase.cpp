@@ -42,22 +42,21 @@ public:
 };
 
 
-ViewsTestCase::ViewsTestCase(Logger* logger): TestCase(logger){}
-
-ViewsTestCase::~ViewsTestCase(){}
+ViewsTestCase::ViewsTestCase(Logger* logger): RichTestCase("ViewsTestCase", logger){}
 
 void ViewsTestCase::execute(){
     emptyViewGroupHaveZeroChilds();
     appeindingThreMockViews();
     removingViewFromGroup();
     drawingMocks();
+    RichTestCase::execute();
 }
 
 void ViewsTestCase::emptyViewGroupHaveZeroChilds(){
     gas::Ptr<gas::ui::ViewGroup> group(new gas::ui::ViewGroup(0,0,1,1));
     // @todo: #10 Adding proper assertions in GasCore-Core
     assert(group->childCount() == 0 && "Child count has unexpected value!");
-    std::cout << "emptyViewGroupHaveZeroChilds: pass" << std::endl;
+    mLogger->print("emptyViewGroupHaveZeroChilds: pass");
 }
 
 void ViewsTestCase::appeindingThreMockViews(){
@@ -67,7 +66,7 @@ void ViewsTestCase::appeindingThreMockViews(){
     group->add(new MockView());
     group->add(new MockView());
     assert(group->childCount() == 3 && "Child count has unexpected value!");
-    std::cout << "appeindingThreMockViews: pass" << std::endl;
+    mLogger->print("appeindingThreMockViews: pass");
 }
 
 void ViewsTestCase::removingViewFromGroup(){
@@ -80,7 +79,8 @@ void ViewsTestCase::removingViewFromGroup(){
     // group->remove(ptr);   
     // assert(group->childCount() == 2 && "Child count has unexpected value!");
     // @todo: #10 Adding proper assertions in GasCore-Core
-    std::cout << "removingViewFromGroup: not implemented" << std::endl;
+
+    mLogger->print("removingViewFromGroup: not implemented");
 }
 
 
@@ -93,9 +93,10 @@ void ViewsTestCase::drawingMocks(){
     try{
         group->draw(canvas);
     }catch(...){
-        std::cout << "drawingMocks: failed" << std::endl;    
+        mLogger->print("drawingMocks: failed");    
     }
-    std::cout << "drawingMocks: pass" << std::endl;
+    // @todo: change testing strategy for this case
+    mLogger->print("removingViewFromGroup: pass");
 }
 
 

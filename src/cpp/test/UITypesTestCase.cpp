@@ -7,35 +7,35 @@
 namespace gas{
 namespace test{
 
-UITypesTestCase::UITypesTestCase(Logger* logger): TestCase(logger){}
-
-UITypesTestCase::~UITypesTestCase(){}
+UITypesTestCase::UITypesTestCase(Logger* logger): RichTestCase("UITypesTestCase", logger){}
 
 void UITypesTestCase::execute(){
     createIntegerPoint();
     createFloatPoint();
     createIntegerRectangle();
     createFloatRectangle();
+    RichTestCase::execute();
 }
 
 void UITypesTestCase::createIntegerPoint(){
     gas::ui::Point<int> a(1, 2);
-    std::cout << "createIntegerPoint() - pass" << std::endl;
+    mLogger->print("createIntegerPoint() - pass");
+    
 }
 
 void UITypesTestCase::createFloatPoint(){
     gas::ui::Point<double> a(3.0, 4.0);
-    std::cout << "createFloatPoint() - pass" << std::endl;
+    mLogger->print("createFloatPoint() - pass");
 }
 
 void UITypesTestCase::createIntegerRectangle(){
     gas::ui::Rectangle<long> a(1,2, 3, 4);
-    std::cout << "createIntegerRectangle() - pass" << std::endl;
+    mLogger->print("createIntegerRectangle() - pass");
 }
 
 void UITypesTestCase::createFloatRectangle(){
     gas::ui::Point<double> a(3.0, 4.0);
-    std::cout << "createFloatRectangle() - pass" << std::endl;
+    mLogger->print("createFloatRectangle() - pass");
 }
 
 

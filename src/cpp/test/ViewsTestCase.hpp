@@ -1,14 +1,13 @@
 #pragma once
 
-#include <gas\test\TestCase.hpp>
+#include <gas\test\RichTestCase.hpp>
 
 namespace gas{
 namespace test{
 
-class ViewsTestCase: public TestCase{
+class ViewsTestCase: public RichTestCase{
 public:
     ViewsTestCase(Logger* logger);
-    ~ViewsTestCase();
     void execute() override;
     void emptyViewGroupHaveZeroChilds();
     void appeindingThreMockViews();
